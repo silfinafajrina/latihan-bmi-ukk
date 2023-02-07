@@ -1,9 +1,9 @@
 //DDM Elements
 const studentForm = document.getElementById("studentForm");
 const studentContainer = document.getElementById("students");
-const nameInput = document.getElementById["name"];
-const ageInput = document.getElementById["age"];
-const rollInput = document.getElementById["roll"];
+const nameInput = document.getElementById("name");
+const ageInput = document.getElementById("age");
+const rollInput = document.getElementById("roll");
 
 // const nameInput = studentForm["name"];
 // const ageInput = studentForm["age"];
@@ -24,7 +24,7 @@ const addstudent = (name, age, roll) => {
     }); 
 localStorage.setItem("students", JSON.stringify(students));
 
-    return { name,ago, roll};
+    return { name,age, roll};
 };
 
 const createStudentElement = ({ name, age, roll}) => {
@@ -42,7 +42,7 @@ const createStudentElement = ({ name, age, roll}) => {
     //Add to the DOM
     studentDiv.append(studentName, studentAge, studentRoll);
     studentContainer.appendChild(studentDiv);
-    studentsContainer.style.display = students.length === 0? "none" : "flex";
+    studentContainer.style.display = students.length === 0? "none" : "flex";
 };
     // studentsContainer.style.display = students.length === 0? "none" : "flex"; 
 
